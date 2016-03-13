@@ -13,12 +13,10 @@ def start_firefox():
 	
 	return webdriver.Firefox(profile)
 
-video = []
+video_link = []
 with open("./youtube_list.txt", 'r') as f:
 	for l in f:
-		video.append(l.replace("\n", ""))
-
-video_link = video
+		video_link.append(l.replace("\n", ""))
 
 driver = start_firefox()
 
